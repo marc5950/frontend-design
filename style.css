@@ -1,2 +1,22 @@
 /* Dine styles her */
-article {}
+
+/* Flow space teknik */
+article {
+	& > * + * {
+		margin-top: var(--flow-space, 0.5rlh);
+	}
+}
+
+/* Custom flow space værdier */
+h2 {
+	--flow-space: 2rlh;
+}
+
+h3 {
+	--flow-space: 1rlh;
+}
+
+/* Elementer der kommer efter h3 får reduceret afstand */
+h3 + * {
+	--flow-space: 0.25rlh;
+}
